@@ -1,0 +1,897 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+
+@media print {
+  body .markdown-body {
+    padding: 0;
+    border: none;
+  }
+}
+</style><title>userguide</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-jupyter用户指南" class="anchor" href="#jupyter%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Jupyter用户指南</h1>
+<h2>
+<a id="user-content-引言" class="anchor" href="#%E5%BC%95%E8%A8%80" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>引言</h2>
+<p>笔记本扩展了基于命令行的方法以高品质来实现交互式计算，提供了一个基于网页应用适用于捕捉整个计算过程：开发，文档处理，执行代码，以及返回结果。jupyter笔记本结合了两个内容：</p>
+<p><strong>一个网页应用</strong>：一个用于包含说明文本，数学，计算以及相应的丰富的格式输出文档的基于浏览器的交互写作工具。</p>
+<p><strong>笔记本文档</strong>：所有内容在网页应用中可见表示，包括计算的输入，输出，解释文本，数学，和丰富的对象媒体表示。</p>
+<blockquote>
+<p>也见于:</p>
+</blockquote>
+<blockquote>
+<p>阅读<a href="">安装指南</a>关于怎样安装笔记本和它的依赖项。</p>
+</blockquote>
+<h3>
+<a id="user-content-网页应用的主要特征" class="anchor" href="#%E7%BD%91%E9%A1%B5%E5%BA%94%E7%94%A8%E7%9A%84%E4%B8%BB%E8%A6%81%E7%89%B9%E5%BE%81" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>网页应用的主要特征</h3>
+<ul>
+<li>浏览器编辑代码，具备自动语法高亮，缩进和tab补全纠错。</li>
+<li>从浏览器中执行代码,计算结果附加在产生它们的代码上。</li>
+<li>计算结果用富媒体表示，例如HTML，LaTex,PNG,SVG等，例如，由matplotlib库支持的出版质量的图，可以被包含在行内。</li>
+<li>浏览器内编辑富文本使用<a href="https://daringfireball.net/projects/markdown/syntax" rel="nofollow">Markdown</a>标记语言，并且可以为代码提供注释，而不只是纯文本。</li>
+<li>轻松地在markdown单元中使用LaTeX包含数学记号，自然地由<a href="https://www.mathjax.org/" rel="nofollow">MathJax</a>。</li>
+</ul>
+<h3>
+<a id="user-content-笔记本文档" class="anchor" href="#%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%96%87%E6%A1%A3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>笔记本文档</h3>
+<p>Notebook文档包含交互式会话的输入和输出以及代码附带的其他文本，但不适用于执行。通过这种方式，笔记本文件可以充当会话的完整计算记录，将可执行代码与解释性文本，数学和结果对象的丰富表示交织在一起。这些文档是内部的<a href="https://en.wikipedia.org/wiki/JSON" rel="nofollow">JSON</a>文件，并以<code>.ipynb</code>扩展名保存。由于JSON是纯文本格式，因此可以通过版本控制并与同事共享。</p>
+<p>可以通过<a href="https://nbconvert.readthedocs.io/en/latest/" rel="nofollow">nbconvert</a>命令将笔记本导出为一系列静态格式，包括HTML（例如，博客文章），reStructuredText，LaTeX，PDF和幻灯片放映。</p>
+<p>此外，可以通过Jupyter Notebook Viewer（nbviewer）共享可从公共URL获得的任何<code>.ipynb</code>笔记本文档。该服务从URL加载笔记本文档并将其呈现为静态网页。因此，结果可能会与同事共享，或作为公共博客帖子分享，而其他用户无需自行安装Jupyter笔记本。实际上，nbviewer只是nbconvert作为一个web服务，所以你可以用nbconvert做你自己的静态转换，而不依赖于nbviewer。</p>
+<blockquote>
+<p>同样见于：</p>
+</blockquote>
+<blockquote>
+<p>笔记本JSON文件格式的详情</p>
+</blockquote>
+<h3>
+<a id="user-content-笔记本和隐私" class="anchor" href="#%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%92%8C%E9%9A%90%E7%A7%81" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>笔记本和隐私</h3>
+<p>由于您在网络浏览器中使用Jupyter，因此有些人可以理解地将关心敏感数据的使用安全。 然而，如果您遵循标准安装说明，Jupyter实际上是在您自己的计算机上运行。 如果地址栏中的URL以
+http:localhost： 或 <a href="http://127.0.0.1" rel="nofollow">http://127.0.0.1</a>: 开头，则表示您的计算机充当服务器。 Jupyter不会将数据发送到其他任何地方 - 而且由于它是开源的，其他人可以检查我们对此是否诚实。</p>
+<p>您也可以远程使用Jupyter：例如，您的公司或大学可能会为您运行服务器。 如果您想在这些情况下处理敏感数据，请咨询您的IT或数据保护人员。</p>
+<p>我们的目标是确保浏览器中的其他页面或同一台计算机上的其他用户无法访问笔记本服务器。 有关更多信息，请参阅<a href="">Jupyter笔记本服务器中的安全性</a>。</p>
+<h2>
+<a id="user-content-启动笔记本服务器" class="anchor" href="#%E5%90%AF%E5%8A%A8%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%9C%8D%E5%8A%A1%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>启动笔记本服务器</h2>
+<p>你可以从命令行里使用如下命令运行一个笔记本：</p>
+<pre><code>jupyter notebook
+</code></pre>
+<p>这将在您的控制台中打印关于笔记本服务器的一些信息，并打开Web浏览器以访问Web应用程序的URL（默认为<a href="http://127.0.0.1:8888" rel="nofollow">http://127.0.0.1:8888</a> ）。</p>
+<p>Jupyter笔记本Web应用程序的登录页面（<strong>仪表板</strong>）显示当前笔记本目录中可用的笔记本（默认情况下，笔记本服务器从其启动的目录）。</p>
+<p>您可以使用“新建笔记本”按钮从仪表板创建新笔记本，也可以通过单击其名称打开现有笔记本。您还可以将<code>.ipynb</code>笔记本和标准<code>.py</code> Python源代码文件拖放到笔记本列表区域。</p>
+<p>从命令行启动笔记本服务器时，您也可以直接打开特定笔记本，绕过仪表板，使用<code>jupyter</code>笔记本my_notebook.ipynb。如果没有给出扩展名，则假定<code>.ipynb</code>扩展名。</p>
+<p>当您在打开的笔记本中时，File |打开...菜单选项将在新浏览器选项卡中打开仪表板，以允许您从笔记本目录打开另一个笔记本或创建新的笔记本。</p>
+<blockquote>
+<p>注意</p>
+<p>如果你想在不同目录下的笔记本上工作，你可以同时启动多个笔记本服务器。 默认情况下，第一台笔记本服务器在端口8888上启动，随后笔记本服务器搜索该端口附近的端口。 您也可以使用<code>--port</code>选项手动指定端口。</p>
+</blockquote>
+<h3>
+<a id="user-content-创建一个新的笔记本文档" class="anchor" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%96%87%E6%A1%A3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>创建一个新的笔记本文档</h3>
+<p>可以随时从仪表板创建新笔记本，或者使用活动笔记本中的“文件”→“新建”菜单选项创建新笔记本。 新笔记本在相同的目录中创建，并将在新的浏览器选项卡中打开。它也将在仪表板上的笔记本列表中映为新条目。<a href="fig/new-notebook.gif" target="_blank"><img src="fig/new-notebook.gif" alt="new-notebook" style="max-width:100%;"></a></p>
+<h3>
+<a id="user-content-打开笔记本" class="anchor" href="#%E6%89%93%E5%BC%80%E7%AC%94%E8%AE%B0%E6%9C%AC" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>打开笔记本</h3>
+<p>一个打开的笔记本 <strong>只有</strong> 一个连接到内核的交互式会话，它将执行用户发送的代码并传回结果。 如果Web浏览器窗口关闭，此内核保持活动状态，并且从仪表板重新打开相同的笔记本，Web应用程序将连接到相同的内核。 在仪表板中，带有活动内核的笔记本在其旁边有一个<code>Shutdown</code>按钮，而没有活动内核的笔记本在其位置上有一个<code>Delete</code>按钮。</p>
+<p>其他客户端可能连接到相同的内核。 当每个内核启动时，笔记本服务器会向终端输出如下消息:</p>
+<pre><code>[NotebookApp] Kernel started: 87f7d2c0-13e3-43df-8bb8-1bd37aaf3373
+</code></pre>
+<p>这个长字符串是内核的ID，用以获取连接内核所需的信息。如果笔记本使用IPython内核，则还可以通过运行<code>％connect_info magic</code>来查看此连接数据，它会显示相同的ID信息以及其他详细信息。</p>
+<p>例如，您可以通过传递一部分ID，从命令行手动启动连接到同一内核的Qt控制台：</p>
+<pre><code>$ jupyter qtconsole - existing87f7d2c0
+</code></pre>
+<p>没有ID，--existing将连接到最近启动的内核。</p>
+<p>使用IPython内核，您还可以在笔记本中运行<code>％qtconsole</code><a href="https://ipython.readthedocs.io/en/stable/interactive/tutorial.html#magics-explained" rel="nofollow">魔术</a>来打开连接到相同内核的Qt控制台。</p>
+<p>也见于</p>
+<p>[解耦双进程模型][解耦]</p>
+<h2>
+<a id="user-content-笔记本用户界面" class="anchor" href="#%E7%AC%94%E8%AE%B0%E6%9C%AC%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>笔记本用户界面</h2>
+<p>当您创建新的笔记本文档时，您将看到 <strong>笔记本名称</strong>，<strong>菜单栏</strong>，<strong>工具栏</strong> 和 <strong>空白代码单元</strong>。
+<a href="fig/blank-notebook-ui.png" target="_blank"><img src="fig/blank-notebook-ui.png" alt="" style="max-width:100%;"></a></p>
+<p><strong>笔记本名称</strong>：显示在页面顶部Jupyter徽标旁边的名称反映了<code>.ipynb</code>文件的名称。 点击笔记本名称会弹出一个对话框，让您对其进行重命名。 因此，将笔记本从“未命名0”重命名为“我的第一个笔记本”在浏览器中，将<code>Untitled0.ipynb</code>文件重命名为我的第一个<code>notebook.ipynb</code>。</p>
+<p><strong><code>菜单栏</code></strong>：菜单栏提供了可用于操作笔记本功能的不同选项。</p>
+<p><strong><code>工具栏</code></strong>：通过点击图标，工具栏提供了在笔记本中执行最常用操作的快速方法。</p>
+<p><strong><code>代码单元格</code></strong>：单元格的默认类型; 阅读关于细胞的解释。</p>
+<h2>
+<a id="user-content-笔记本文件的结构" class="anchor" href="#%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%96%87%E4%BB%B6%E7%9A%84%E7%BB%93%E6%9E%84" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>笔记本文件的结构</h2>
+<p>笔记本由一系列单元组成。单元格是一个多行文本输入字段，其内容可以通过使用_Shift-Enter_或单击工具栏上的“Play”按钮或菜单栏中的<code>Cell</code>，<code>Run</code>来执行。单元的执行行为由单元的类型决定。有三种类型的单元：<strong>代码单元</strong>，<strong>Markdown单元__和__纯文本单元</strong>。每个单元格都是一个代码单元格，但其类型可以通过使用工具栏上的下拉菜单（最初将为“代码”）或通过[键盘快捷键][short-cut]进行更改。</p>
+<p>有关您可以在笔记本中执行的各种操作的更多信息，请参阅<a href="https://nbviewer.jupyter.org/github/jupyter/notebook/tree/master/docs/source/examples/Notebook/" rel="nofollow">示例集合</a>。</p>
+<h3>
+<a id="user-content-代码单元格" class="anchor" href="#%E4%BB%A3%E7%A0%81%E5%8D%95%E5%85%83%E6%A0%BC" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>代码单元格</h3>
+<p>__代码单元__允许您编辑和编写新代码，并提供完整的语法高亮和制表符完成。您使用的编程语言取决于 <strong>内核</strong>，而默认内核（IPython）运行Python代码。</p>
+<p>当代码单元被执行时，它所包含的代码被发送到与笔记本相关的内核。从计算中返回的结果将作为单元的输出显示在笔记本中。输出不限于文本，还可以使用许多其他可能的输出形式，包括<code>matplotlib</code>图片和HTML表格（例如，用在<code>Pandas</code>数据分析包中）。这就是IPython丰富的显示功能。</p>
+<p>也见于</p>
+<p><a href="https://nbviewer.jupyter.org/github/ipython/ipython/blob/master/examples/IPython%20Kernel/Rich%20Output.ipynb" rel="nofollow">富文本输出</a>示例笔记本</p>
+<h3>
+<a id="user-content-markdown单元" class="anchor" href="#markdown%E5%8D%95%E5%85%83" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Markdown单元</h3>
+<p>您可以通过文字方式记录计算过程，使用<code>富文本</code>将描述性文本与代码交替使用。在IPython中，这是通过使用Markdown语言标记文本来完成的。相应的单元格称为Markdown单元格。 Markdown语言提供了一种简单的方法来执行该文本标记，即指定文本的哪些部分应该被强调（斜体），粗体，表单列表等。</p>
+<p>如果您想为文档提供结构，则可以使用Markdown标题。 Markdown标题包含1到6个＃标记<code>＃</code>，后跟一个空格和章节的标题。Markdown标题将被转换为指向笔记本某个章节的可点击链接。在导出到其他文档格式（如PDF）时，它也用作提示。</p>
+<p>当执行Markdown单元格时，Markdown代码将转换为相应的格式化富文本。 Markdown允许任意的HTML代码进行格式化。</p>
+<p>在Markdown单元格中，您还可以使用标准的LaTeX符号以简单的方式包括数学：<code>$ ... $</code>用于内联数学，<code>$$ ... $$</code>用于表示单独的数学公式。当执行Markdown单元格时，LaTeX部分会自动以HTML输出格式呈现为具有高质量排版的方程式。 <a href="https://www.mathjax.org/" rel="nofollow">MathJax</a>使得这成为可能，其支持LaTeX功能的一大部分。</p>
+<p>由LaTeX和AMS-LaTeX（amsmath包）定义的标准数学环境也可以工作，如<code>\ begin {equation} ... \ end {equation}</code>和<code>\ begin {align} ... \ end {align}</code>。新的LaTeX宏可以使用标准方法定义，例如<code>\ newcommand</code>，通过将它们放置在Markdown单元格中的数学分隔符之间的任何位置。这些定义在整个IPython会话的其余部分都可用。</p>
+<blockquote>
+<p>也见于</p>
+</blockquote>
+<blockquote>
+<p><a href="https://nbviewer.jupyter.org/github/jupyter/notebook/blob/master/docs/source/examples/Notebook/Working%20With%20Markdown%20Cells.ipynb" rel="nofollow">使用Markdown单元工作</a>示例笔记本</p>
+</blockquote>
+<h3>
+<a id="user-content-纯文本单元" class="anchor" href="#%E7%BA%AF%E6%96%87%E6%9C%AC%E5%8D%95%E5%85%83" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>纯文本单元</h3>
+<p>纯文本单元提供了一个可以直接编写输出的位置。纯文本单元不会被笔记本执行。当通过nbconvert传递时，原始单元格以未修改的目标格式传送。例如，您可以将完整的LaTeX输入到一个纯文本单元格中，该单元格仅在由nbconvert转换后才由LaTeX渲染。</p>
+<h2>
+<a id="user-content-基本工作流程" class="anchor" href="#%E5%9F%BA%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>基本工作流程</h2>
+<p>笔记本中的正常工作流程与标准的IPython会话非常相似，不同之处在于您可以多次就地编辑单元格，直到获得所需的结果，而不必使用<code>％run</code> 魔法命令重新运行不同的脚本。</p>
+<p>通常情况下，您将计算问题分解，然后将相关想法组织到单元格中，并在前一部分正确工作时继续前进。交互式探索要比将计算分解为必须一起执行的多个脚本更为方便，后者在以前是必须的，特别是如果其中的一部分需要很长时间才能运行。</p>
+<p>要中断耗时过长的计算，请使用<code>Kernel</code>，<code>Interrupt</code>菜单选项或i，i键盘快捷键。同样，要重新启动整个计算过程，请使用<code>Kernel</code>，<code>Restart</code>菜单选项或0,0快捷键。</p>
+<p>笔记本可以作为<code>.ipynb</code>文件下载，也可以使用菜单选项<code>File</code>，<code>Download as</code>将其转换为多种其他格式。</p>
+<blockquote>
+<p>也见于</p>
+</blockquote>
+<blockquote>
+<p><a href="https://nbviewer.jupyter.org/github/jupyter/notebook/blob/master/docs/source/examples/Notebook/Running%20Code.ipynb" rel="nofollow">在Jupyter Notebook运行代码</a>实例笔记</p>
+</blockquote>
+<blockquote>
+<p><a href="https://nbviewer.jupyter.org/github/jupyter/notebook/blob/master/docs/source/examples/Notebook/Notebook%20Basics.ipynb" rel="nofollow">笔记本基础</a>示例笔记本</p>
+</blockquote>
+<h3>
+<a id="user-content-键盘快捷键" class="anchor" href="#%E9%94%AE%E7%9B%98%E5%BF%AB%E6%8D%B7%E9%94%AE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>键盘快捷键</h3>
+<p>笔记本中的所有操作都可以使用鼠标执行，但键盘快捷键也可用于最常见的操作。要记住的重要快捷键如下：</p>
+<ul>
+<li>Shift-Enter：运行单元格
+<ul>
+<li>执行当前单元格，显示任何输出，然后跳转到下一个单元格。如果在最后一个单元格上调用Shift-Enter，它会在下面创建一个新单元格。这相当于单击工具栏中的“单元格”，“运行”菜单项或“播放”按钮。</li>
+</ul>
+</li>
+<li>Esc：命令模式
+<ul>
+<li>在命令模式下，您可以使用键盘快捷键浏览笔记本电脑。</li>
+</ul>
+</li>
+<li>Enter：编辑模式
+<ul>
+<li>在编辑模式下，您可以编辑单元格中的文本。有关可用快捷键的完整列表，请单击笔记本菜单中的<code>“帮助”</code>，<code>“键盘快捷键”</code>。</li>
+</ul>
+</li>
+</ul>
+<h2>
+<a id="user-content-画图" class="anchor" href="#%E7%94%BB%E5%9B%BE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>画图</h2>
+<p>Jupyter笔记本的一个主要特点是能够显示运行代码单元的输出图片。 IPython内核被设计为与matplotlib绘图库无缝协作以提供此功能。特定的绘图库集成是内核的一个特色。</p>
+<h2>
+<a id="user-content-安装内核" class="anchor" href="#%E5%AE%89%E8%A3%85%E5%86%85%E6%A0%B8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>安装内核</h2>
+<p>有关如何安装Python内核的信息，请参阅<a href="https://ipython.org/install.html" rel="nofollow">IPython安装页面</a>。</p>
+<p>Jupyter wiki有很多其他语言的<a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">内核列表</a>。他们通常会附带说明如何在笔记本中配置内核。</p>
+<h2>
+<a id="user-content-信任笔记本" class="anchor" href="#%E4%BF%A1%E4%BB%BB%E7%AC%94%E8%AE%B0%E6%9C%AC" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>信任笔记本</h2>
+<p>为防止在笔记本打开时，代表用户执行不可信代码，我们会存储每个可信任笔记本的签名。当笔记本打开时，笔记本服务器验证此签名。如果找不到匹配的签名，那么Javascript和HTML输出将不会显示，直到通过重新执行单元格重新生成。</p>
+<p>您本人完全执行过的任何笔记本都将被视为受信任，并且其HTML和Javascript输出将在加载时显示。</p>
+<p>如果您需要在不重新执行的情况下查看HTML或Javascript输出，并且您确定笔记本没有恶意，您可以通过命令行告诉Jupyter相信它：</p>
+<pre><code>$ jupyter信任mynotebook.ipynb
+</code></pre>
+<p>有关信任机制的更多详细信息，请参阅<a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html#notebook-security" rel="nofollow">笔记本文档安全性</a></p>
+<h2>
+<a id="user-content-浏览器兼容性" class="anchor" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>浏览器兼容性</h2>
+<p>Jupyter Notebook旨在支持这些浏览器的最新版本：</p>
+<ul>
+<li>Chorme</li>
+<li>Safari</li>
+<li>Firefox
+Opera和Edge的最新版本也可以使用，但如果不使用，请使用其中一种支持的浏览器。</li>
+</ul>
+<p>使用HTTPS和不可信证书的Safari不能工作（websocket将失败）。</p>
+<p>[解耦]:
+[short-cut]: <a href="https://ipython.readthedocs.io/en/stable/interactive/tutorial.html#magics-explained" rel="nofollow">https://ipython.readthedocs.io/en/stable/interactive/tutorial.html#magics-explained</a></p>
+</article></body></html>
